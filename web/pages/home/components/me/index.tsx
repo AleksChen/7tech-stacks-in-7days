@@ -1,6 +1,6 @@
 const MePage = () => {
   return (
-    <div>
+    <div className="pb-12">
       <div className="h-64 flex items-center justify-center bg-lime-700 rounded">
         <div className="text-center">
           <img
