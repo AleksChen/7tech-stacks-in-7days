@@ -5,11 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 > node version >= v18.17.0
@@ -18,16 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Result
+> Change Log
 
-### List Page
-
-![List Page](static/md/image.png)
-
-### Me Page
-
-![Me Page](static/md/image-1.png)
-
-### Detail Page
-
-![Detail Page](static/md/image-2.png)
+- APP Router 需要使用 ` next/navigation`` 去实现路由跳转才能保持页面状态，使用  `<Link>` 跳转则不行
+- 使用 Layout 去实现 Tabbar，使用 `usePathname` 去获取路径。对非 Tab 页面不展示 Tabbar

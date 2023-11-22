@@ -1,3 +1,7 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export enum Tab {
   CATEGORY = 1,
   ME = 2,
@@ -8,31 +12,29 @@ const TAB_MAP = {
   [Tab.ME]: "我的",
 };
 
-interface TabBarProps {
-  value: Tab;
-  onChange: (value: Tab) => void;
-}
-
-const TabBar: React.FC<TabBarProps> = ({ value, onChange }) => {
+const TabBar: React.FC = () => {
+  const pathname = usePathname();
+  if (pathname.includes("/detail")) return null;
   return (
-    <nav className="mx-auto flex border-t-2 border-zinc-200 fixed inset-x-0 bottom-0 bg-white shadow-lg">
-      <div
+    <div className="mx-auto flex border-t-2 border-zinc-200 fixed inset-x-0 bottom-0 bg-white shadow-lg">
+      <Link
+        href="/"
+        scroll={false}
         className={`text-2xl flex items-center justify-center h-16 flex-1    border-zinc-400  ${
-          value === Tab.CATEGORY ? "text-white bg-lime-700" : "text-zinc-400"
+          pathname === "/" ? "text-white bg-lime-700" : "text-zinc-400"
         }`}
-        onClick={() => onChange(Tab.CATEGORY)}
       >
         {TAB_MAP[Tab.CATEGORY]}
-      </div>
-      <div
+      </Link>
+      <Link
+        href="/me"
         className={`text-2xl flex items-center justify-center h-16 flex-1    border-zinc-400 ${
-          value === Tab.ME ? "text-white bg-lime-700" : "text-zinc-400"
+          pathname === "/me" ? "text-white bg-lime-700" : "text-zinc-400"
         }`}
-        onClick={() => onChange(Tab.ME)}
       >
         {TAB_MAP[Tab.ME]}
-      </div>
-    </nav>
+      </Link>
+    </div>
   );
 };
 
