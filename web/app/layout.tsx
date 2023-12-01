@@ -2,8 +2,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import TabBar from "@/components/TabBar";
+import dynamic from "next/dynamic";
 
+const TabBar = dynamic(() => import("@/components/TabBar"), { ssr: false });
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata: Metadata = {

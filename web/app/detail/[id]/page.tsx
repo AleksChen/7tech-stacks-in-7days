@@ -1,13 +1,18 @@
 "use client";
 
 import { apiGetDetail } from "@/apis";
-import CommonPageContainer from "@/components/CommonPageContainer";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import React from "react";
 import Slider from "react-slick";
+import dynamic from "next/dynamic";
+
+const CommonPageContainer = dynamic(
+  () => import("@/components/CommonPageContainer"),
+  { ssr: false }
+);
 
 const SimpleSlider = ({ imgs }: { imgs: string[] }) => {
   var settings = {

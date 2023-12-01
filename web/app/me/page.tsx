@@ -1,5 +1,7 @@
 import Image from "next/image";
-import Layout from "../layout";
+import dynamic from "next/dynamic";
+
+const Layout = dynamic(() => import("../layout"), { ssr: false });
 
 const MePage = () => {
   return (
