@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Grid</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">主页</string>
+    <string name="title_me">我的</string>
 </resources>

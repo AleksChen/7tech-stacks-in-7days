@@ -1,0 +1,169 @@
+{
+  "list": [
+    {
+      "spuId": 1522400361,
+      "name": "莺歌美式 ",
+      "salePrice": 30.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
+      "introduction": "集中莺歌的优质风味，曼妙坚果香气，酸甜柑橘风味"
+    },
+    {
+      "spuId": 1522220391,
+      "name": "产地甄选黑咖莺歌",
+      "salePrice": 32.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png",
+      "introduction": "轻柔的核果风味，尾韵是山核桃般坚果香气"
+    },
+    {
+      "spuId": 1522680381,
+      "name": "莺歌拿铁",
+      "salePrice": 34.0,
+      "productType": 1,
+      "productTags": ["新品", "巴旦木麦香吐司"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当"
+    },
+    {
+      "spuId": 11522400361,
+      "name": "1莺歌美式 ",
+      "salePrice": 30.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
+      "introduction": "集中莺歌的优质风味，曼妙坚果香气，酸甜柑橘风味"
+    },
+    {
+      "spuId": 11522220391,
+      "name": "1产地甄选黑咖莺歌",
+      "salePrice": 32.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png",
+      "introduction": "轻柔的核果风味，尾韵是山核桃般坚果香气"
+    },
+    {
+      "spuId": 11522680381,
+      "name": "1莺歌拿铁",
+      "salePrice": 34.0,
+      "productType": 1,
+      "productTags": ["新品", "巴旦木麦香吐司"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当"
+    },
+    {
+      "spuId": 21522400361,
+      "name": "2莺歌美式 ",
+      "salePrice": 30.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
+      "introduction": "集中莺歌的优质风味，曼妙坚果香气，酸甜柑橘风味"
+    },
+    {
+      "spuId": 21522220391,
+      "name": "2产地甄选黑咖莺歌",
+      "salePrice": 32.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png",
+      "introduction": "轻柔的核果风味，尾韵是山核桃般坚果香气"
+    },
+    {
+      "spuId": 21522680381,
+      "name": "2莺歌拿铁",
+      "salePrice": 34.0,
+      "productType": 1,
+      "productTags": ["新品", "巴旦木麦香吐司"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当"
+    },
+    {
+      "spuId": 31522400361,
+      "name": "3莺歌美式 ",
+      "salePrice": 30.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
+      "introduction": "集中莺歌的优质风味，曼妙坚果香气，酸甜柑橘风味"
+    },
+    {
+      "spuId": 31522220391,
+      "name": "3产地甄选黑咖莺歌",
+      "salePrice": 32.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png",
+      "introduction": "轻柔的核果风味，尾韵是山核桃般坚果香气"
+    },
+    {
+      "spuId": 31522680381,
+      "name": "3莺歌拿铁",
+      "salePrice": 34.0,
+      "productType": 1,
+      "productTags": ["新品", "巴旦木麦香吐司"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当"
+    },
+    {
+      "spuId": 41522400361,
+      "name": "4莺歌美式 ",
+      "salePrice": 30.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
+      "introduction": "集中莺歌的优质风味，曼妙坚果香气，酸甜柑橘风味"
+    },
+    {
+      "spuId": 41522220391,
+      "name": "4产地甄选黑咖莺歌",
+      "salePrice": 32.0,
+      "productType": 1,
+      "productTags": ["新品", "黑茶日晒处理"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png",
+      "introduction": "轻柔的核果风味，尾韵是山核桃般坚果香气"
+    },
+    {
+      "spuId": 41522680381,
+      "name": "4莺歌拿铁",
+      "salePrice": 34.0,
+      "productType": 1,
+      "productTags": ["新品", "巴旦木麦香吐司"],
+      "hasExtraPrice": false,
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当"
+    }
+  ]
+}
