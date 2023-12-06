@@ -1,0 +1,59 @@
+{
+  "singleSpu": {
+    "spuId": 1521860101,
+    "name": "美式·耶加雪菲",
+    "salePrice": 20.0,
+    "saleState": 1,
+    "coverImage": {
+      "type": 1,
+      "resourceUrl": "https://gridcoffee-online.fbcontent.cn//file/svr8a0hcx.png",
+      "linkUrl": null,
+      "width": 0,
+      "height": 0
+    },
+    "carouselImages": [
+      {
+        "type": 1,
+        "resourceUrl": "https://gridcoffee-online.fbcontent.cn//file/qlk9cmy6b.jpg",
+        "linkUrl": null,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "type": 1,
+        "resourceUrl": "https://gridcoffee-online.fbcontent.cn//file/nigiju163.jpg",
+        "linkUrl": null,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "introduction": "单一产地耶加雪菲，中深度烘焙",
+    "detailedIntroductions": [
+      "使用耶加雪菲单一产地咖啡豆，中深度烘焙，醇厚的同时风味饱满"
+    ],
+    "cupType": ["冰/少冰/去冰 12oz", "热 10oz"],
+    "material": ["浓缩咖啡、水"],
+    "tagImage": {
+      "type": 1,
+      "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
+      "linkUrl": "",
+      "width": 1,
+      "height": 1
+    },
+    "productTags": [],
+    "beansTagImage": {
+      "type": 1,
+      "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
+      "linkUrl": "",
+      "width": 1,
+      "height": 1
+    },
+    "beansSource": "埃塞俄比亚 耶加雪菲",
+    "productInventory": {
+      "totalCount": 2147483647,
+      "usedCount": 7685,
+      "leftCount": 2147475962,
+      "limitCount": false
+    }
+  }
+}
