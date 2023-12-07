@@ -18,7 +18,22 @@ import com.bumptech.glide.Glide
 import com.example.grid.utils.loadJSONFromAsset
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import android.graphics.Rect
 
+class SpacesItemDecoration(private val space: Int) : RecyclerView.ItemDecoration() {
+    override fun getItemOffsets(
+        outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State
+    ) {
+        with(outRect) {
+            if (parent.getChildAdapterPosition(view) == 0) {
+                top = space
+            }
+            left =  space
+            right = space
+            bottom = space
+        }
+    }
+}
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -39,13 +54,15 @@ class HomeFragment : Fragment() {
         val productListType = object : TypeToken<ProductList>() {}.type
         val res: ProductList = gson.fromJson(jsonString, productListType)
       
+        val recyclerView = binding.recyclerView
+        recyclerView.addItemDecoration(SpacesItemDecoration(36))
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.adapter = ProductAdapter(res.list)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = ProductAdapter(res.list)
     }
 
     // 商品数据类
-    data class Product(val name: String, val price: Double, val img: String)
+    data class Product(val name: String, val salePrice: Double, val img: String)
     data class ProductList(
         val list: List<Product>
     )
@@ -60,7 +77,7 @@ class HomeFragment : Fragment() {
 
         fun bind(product: Product) {
             nameTextView.text = product.name
-            priceTextView.text = "${product.price}"
+            priceTextView.text = "${product.salePrice}元"
 
             Glide.with(view.context).load(product.img).placeholder(R.mipmap.ic_launcher).into(productImage)
         }
