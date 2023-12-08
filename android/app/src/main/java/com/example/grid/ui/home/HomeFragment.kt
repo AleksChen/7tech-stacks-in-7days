@@ -1,24 +1,23 @@
 package com.example.grid.ui.home
 
+import android.app.ActionBar
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import android.widget.ImageView
-import android.graphics.BitmapFactory
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.grid.databinding.FragmentHomeBinding
-import com.example.grid.R
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.grid.R
+import com.example.grid.databinding.FragmentHomeBinding
 import com.example.grid.utils.loadJSONFromAsset
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import android.graphics.Rect
 
 class SpacesItemDecoration(private val space: Int) : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(
@@ -42,7 +41,12 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        // 在 Fragment 的 onCreateView 生命周期中调用 supportActionBar?.hide() 进行隐藏，但会把所有页面的操作栏都隐藏
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
+        
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
