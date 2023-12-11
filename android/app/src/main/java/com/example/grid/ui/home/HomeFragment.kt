@@ -1,6 +1,5 @@
 package com.example.grid.ui.home
 
-import android.app.ActionBar
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.grid.R
 import com.example.grid.databinding.FragmentHomeBinding
@@ -21,13 +21,16 @@ import com.google.gson.reflect.TypeToken
 
 class SpacesItemDecoration(private val space: Int) : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(
-        outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State
+            outRect: Rect,
+            view: View,
+            parent: RecyclerView,
+            state: RecyclerView.State
     ) {
         with(outRect) {
             if (parent.getChildAdapterPosition(view) == 0) {
                 top = space
             }
-            left =  space
+            left = space
             right = space
             bottom = space
         }
@@ -38,13 +41,13 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
 
         // 在 Fragment 的 onCreateView 生命周期中调用 supportActionBar?.hide() 进行隐藏，但会把所有页面的操作栏都隐藏
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
-        
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         return binding.root
@@ -57,7 +60,7 @@ class HomeFragment : Fragment() {
         val gson = Gson()
         val productListType = object : TypeToken<ProductList>() {}.type
         val res: ProductList = gson.fromJson(jsonString, productListType)
-      
+
         val recyclerView = binding.recyclerView
         recyclerView.addItemDecoration(SpacesItemDecoration(36))
 
@@ -65,39 +68,57 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = ProductAdapter(res.list)
     }
 
-    // 商品数据类
-    data class Product(val name: String, val salePrice: Double, val img: String)
-    data class ProductList(
-        val list: List<Product>
+    data class Product(
+            val spuId: Double,
+            val name: String,
+            val salePrice: Double,
+            val img: String,
+            val introduction: String,
+            val tags: Array<String>
     )
-    
+
+    data class ProductList(val list: List<Product>)
+
     inner class ProductAdapter(private val products: List<Product>) :
-    RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+            RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
-    inner class ProductViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val productImage: ImageView = view.findViewById(R.id.productImage)
-        val nameTextView: TextView = view.findViewById(R.id.productName)
-        val priceTextView: TextView = view.findViewById(R.id.productPrice)
+        inner class ProductViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+            val productImage: ImageView = view.findViewById(R.id.productImage)
+            val nameTextView: TextView = view.findViewById(R.id.productName)
+            val introductionTextView: TextView = view.findViewById(R.id.productIntroduction)
+            val priceTextView: TextView = view.findViewById(R.id.productPrice)
 
-        fun bind(product: Product) {
-            nameTextView.text = product.name
-            priceTextView.text = "${product.salePrice}元"
+            fun bind(product: Product) {
+                nameTextView.text = product.name
+                priceTextView.text = "${product.salePrice}元"
+                introductionTextView.text = product.introduction
+                Glide.with(view.context)
+                        .load(product.img)
+                        .placeholder(R.mipmap.ic_launcher)
+                        .into(productImage)
+            }
 
-            Glide.with(view.context).load(product.img).placeholder(R.mipmap.ic_launcher).into(productImage)
+            init {
+                view.setOnClickListener {
+                    // val product = products[adapterPosition]
+                    findNavController().navigate(R.id.action_navigation_home_to_detailFragment)
+                }
+            }
         }
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
+            val layoutInflater = LayoutInflater.from(parent.context)
+            val view = layoutInflater.inflate(R.layout.item_product, parent, false)
+
+            return ProductViewHolder(view)
+        }
+
+        override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
+            holder.bind(products[position])
+        }
+
+        override fun getItemCount() = products.size
+
+        fun getItem(position: Int) = products[position]
     }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.item_product, parent, false)
-        return ProductViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        holder.bind(products[position]) //这里调用 bind() 方法
-    }
-
-    override fun getItemCount() = products.size
-}
-
 }

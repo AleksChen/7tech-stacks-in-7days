@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/mobile_navigation" app:startDestination="@+id/navigation_home">
 
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.grid.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+    <fragment android:id="@+id/navigation_home" android:name="com.example.grid.ui.home.HomeFragment" android:label="@string/title_home" tools:layout="@layout/fragment_home">
 
-    <fragment
-        android:id="@+id/navigation_me"
-        android:name="com.example.grid.ui.me.MeFragment"
-        android:label="@string/title_me"
-        tools:layout="@layout/fragment_me" />
+        <action android:id="@+id/action_navigation_home_to_detailFragment" app:destination="@id/detailFragment">
+            <argument android:name="spuId" app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment android:id="@+id/navigation_me" android:name="com.example.grid.ui.me.MeFragment" android:label="@string/title_me" tools:layout="@layout/fragment_me" />
+
+
+    <fragment android:id="@+id/detailFragment" android:name="com.example.grid.ui.detail.DetailsFragment" android:label="@string/title_detail" tools:layout="@layout/fragment_details">
+        <argument android:name="spuId" app:argType="string" />
+    </fragment>
 </navigation>
