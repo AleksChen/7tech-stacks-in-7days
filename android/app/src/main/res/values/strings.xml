@@ -2,4 +2,6 @@
     <string name="app_name">Mall Demo</string>
     <string name="title_home">主页</string>
     <string name="title_me">我的</string>
+    <string name="title_detail">详情页</string>
+    <string name="user_name">Grid Coffee</string>
 </resources>
