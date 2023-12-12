@@ -1,15 +1,26 @@
 package com.example.grid.ui.detail
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.viewpager.widget.PagerAdapter
+import com.bumptech.glide.Glide
 import com.example.grid.R
+import com.example.grid.databinding.FragmentDetailsBinding
+import com.example.grid.utils.loadJSONFromAsset
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 private const val ARG_SPUID = "param1"
 
@@ -18,6 +29,8 @@ private const val ARG_SPUID = "param1"
  * instance of this fragment.
  */
 class DetailsFragment : Fragment() {
+    private lateinit var binding: FragmentDetailsBinding
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
 
@@ -36,8 +49,59 @@ class DetailsFragment : Fragment() {
         requireActivity().findViewById<BottomNavigationView>(R.id.nav_view).visibility = View.GONE
         setHasOptionsMenu(true)
 
-        return inflater.inflate(R.layout.fragment_details, container, false)
+        binding = FragmentDetailsBinding.inflate(inflater, container, false)
+
+        return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val viewPager = binding.viewPager
+        val productName = binding.productName
+        val productSlogan = binding.productSlogan
+
+        val jsonString = loadJSONFromAsset(requireContext(), "product-detail.json")
+        val gson = Gson()
+        val productType = object : TypeToken<Product>() {}.type
+        val res: Product = gson.fromJson(jsonString, productType)
+
+        val images = res.carouselImages ?: emptyList()
+        viewPager.adapter = ImagePagerAdapter(requireContext(), images)
+
+        productName.text = res.name
+        productSlogan.text = res.detailedIntroductions
+        binding.productBeanSourceText.text = res.beansSource
+
+        val productIntroductionList = res.introduction ?: emptyList()
+        productIntroductionList.forEach { introductionText ->
+            val textView = TextView(context)
+            textView.text = introductionText
+
+            val layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            layoutParams.setMargins(0, 20, 0, 0)
+
+            textView.layoutParams = layoutParams
+            textView.textSize = 20f
+            binding.product.addView(textView)
+        }
+
+        Glide.with(view.context).load(res.beansTagImage).into(binding.productBeanSourceImg)
+    }
+
+    data class Product(
+            val spuId: Double,
+            val name: String,
+            val salePrice: Double,
+            val carouselImages: List<String>,
+            val introduction: List<String>,
+            val detailedIntroductions: String,
+            val beansSource: String,
+            val beansTagImage: String,
+    )
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
@@ -74,5 +138,35 @@ class DetailsFragment : Fragment() {
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
         requireActivity().findViewById<BottomNavigationView>(R.id.nav_view).visibility =
                 View.VISIBLE
+    }
+}
+
+class ImagePagerAdapter(private val context: Context, private val images: List<String>) :
+        PagerAdapter() {
+
+    override fun isViewFromObject(view: View, `object`: Any): Boolean {
+        return view == `object`
+    }
+
+    override fun getCount(): Int {
+        return images.size
+    }
+
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        val imageView = ImageView(context)
+        imageView.layoutParams =
+                ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, // Width
+                        ViewGroup.LayoutParams.WRAP_CONTENT // Height
+                )
+        imageView.scaleType = ImageView.ScaleType.CENTER_CROP
+        Glide.with(context).load(images[position]).into(imageView)
+
+        container.addView(imageView)
+        return imageView
+    }
+
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        container.removeView(`object` as View)
     }
 }

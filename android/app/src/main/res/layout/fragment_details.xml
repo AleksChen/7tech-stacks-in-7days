@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".DetailsFragment">
 
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="详情页" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
-</FrameLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="400dp">
+
+            <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+        <LinearLayout android:id="@+id/product" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+
+            <LinearLayout android:id="@+id/productFirstRow" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/productName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="24sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/productBeanSource" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <ImageView android:id="@+id/productBeanSourceImg" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginEnd="6dp" />
+                <TextView android:id="@+id/productBeanSourceText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/productSlogan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:layout_marginTop="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#828182"
+                android:layout_marginVertical="15dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+        

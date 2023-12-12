@@ -41,7 +41,7 @@ class MeFragment : Fragment() {
             val button = Button(requireContext()).apply {
                 layoutParams = GridLayout.LayoutParams().apply {
                     width = 0
-                    height = GridLayout.LayoutParams.WRAP_CONTENT
+                    height = 200
                     columnSpec = GridLayout.spec(i % 2, 1f)  // assign items to the column and set the weight
                     rowSpec = GridLayout.spec(i / 2)     // assign items to the row
                 }
