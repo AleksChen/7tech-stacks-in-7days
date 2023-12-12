@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.PagerAdapter
@@ -89,6 +89,18 @@ class DetailsFragment : Fragment() {
             binding.product.addView(textView)
         }
 
+
+        val toCartButton = binding.toCart
+        toCartButton.setOnClickListener {
+            Toast.makeText(requireContext(), "加入购物车成功", Toast.LENGTH_SHORT).show()
+            findNavController().navigateUp()
+        }
+
+        val toBuyButton = binding.toBuy
+        toBuyButton.setOnClickListener {
+            Toast.makeText(requireContext(), "前往直接购物", Toast.LENGTH_SHORT).show()
+            findNavController().navigateUp()
+        }
         Glide.with(view.context).load(res.beansTagImage).into(binding.productBeanSourceImg)
     }
 
