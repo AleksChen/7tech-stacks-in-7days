@@ -1,59 +1,34 @@
 {
-  "singleSpu": {
-    "spuId": 1521860101,
-    "name": "美式·耶加雪菲",
-    "salePrice": 20.0,
-    "saleState": 1,
-    "coverImage": {
-      "type": 1,
-      "resourceUrl": "https://gridcoffee-online.fbcontent.cn//file/svr8a0hcx.png",
-      "linkUrl": null,
-      "width": 0,
-      "height": 0
-    },
-    "carouselImages": [
-      {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn//file/qlk9cmy6b.jpg",
-        "linkUrl": null,
-        "width": 0,
-        "height": 0
-      },
-      {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn//file/nigiju163.jpg",
-        "linkUrl": null,
-        "width": 0,
-        "height": 0
-      }
-    ],
-    "introduction": "单一产地耶加雪菲，中深度烘焙",
-    "detailedIntroductions": [
-      "使用耶加雪菲单一产地咖啡豆，中深度烘焙，醇厚的同时风味饱满"
-    ],
-    "cupType": ["冰/少冰/去冰 12oz", "热 10oz"],
-    "material": ["浓缩咖啡、水"],
-    "tagImage": {
-      "type": 1,
-      "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
-      "linkUrl": "",
-      "width": 1,
-      "height": 1
-    },
-    "productTags": [],
-    "beansTagImage": {
-      "type": 1,
-      "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
-      "linkUrl": "",
-      "width": 1,
-      "height": 1
-    },
-    "beansSource": "埃塞俄比亚 耶加雪菲",
-    "productInventory": {
-      "totalCount": 2147483647,
-      "usedCount": 7685,
-      "leftCount": 2147475962,
-      "limitCount": false
-    }
+  "spuId": 1521860101,
+  "name": "美式·耶加雪菲",
+  "salePrice": 20.0,
+  "saleState": 1,
+  "coverImage": "https://gridcoffee-online.fbcontent.cn//file/svr8a0hcx.png",
+  "carouselImages": [
+    "https://gridcoffee-online.fbcontent.cn//file/qlk9cmy6b.jpg",
+    "https://gridcoffee-online.fbcontent.cn//file/nigiju163.jpg",
+    "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+    "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
+    "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png"
+  ],
+  "introduction": [
+    "美式耶加雪菲是一种具有独特风味和丰富香味的咖啡豆，来自埃塞俄比亚南部的耶加雪菲地区。这种咖啡豆在世界都受到了广泛的好评，因其口感丰富，酸甜均衡，带有坚果、巧克力、柑橘和浆果的多层次口感。耶加雪菲地区的气候条件对这种咖啡豆的特色风味起着决定性的作用。",
+    "耶加雪菲咖啡豆的生长环境非常独特，它们在海拔2000米以上的高山丛林中生长，阳光充足，雨量适中，土壤肥沃。这种优越的生长环境使耶加雪菲咖啡豆的香味和口感远胜于其他咖啡豆。有人形容它为“复杂而电动的口感，清晰的酸味和深沉的甜味”。",
+    "美式耶加雪菲是在冲泡方式上对传统耶加雪菲的一种创新。普通的耶加雪菲咖啡一般是用手冲的方式冲泡，而美式耶加雪菲是用于美式咖啡机上冲泡。这样的冲泡方式能够更好地提取咖啡豆的香味，使咖啡的口感更加丰富，这也是它受到广泛欢迎的原因之一。",
+    "美式耶加雪菲通常带有一种浓郁的酒香和果香，味道非常独特。它的口感酸甜均衡，无论是色泽、香气还是口感，都堪称完美。许多人会形容它为“一口咖啡，一口音乐”，因为它的味道就像一首美妙的乐曲一样令人心醉。总的来说，美式耶加雪菲是一种非常理想的咖啡，无论是味道还是口感，都让人难以忘怀。"
+  ],
+  "detailedIntroductions":
+    "使用耶加雪菲单一产地咖啡豆，中深度烘焙，醇厚的同时风味饱满"
+  ,
+  "cupType": ["冰/少冰/去冰 12oz", "热 10oz"],
+  "material": ["浓缩咖啡、水"],
+  "tagImage":"https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
+  "beansTagImage": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
+  "beansSource": "埃塞俄比亚 耶加雪菲",
+  "productInventory": {
+    "totalCount": 2147483647,
+    "usedCount": 7685,
+    "leftCount": 2147475962,
+    "limitCount": false
   }
 }

@@ -1,6 +1,91 @@
 {
   "list": [
     {
+      "spuId": 1522680381,
+      "name": "莺歌拿铁",
+      "salePrice": 34.0,
+      "productType": 1,
+      "productTags": ["新品", "巴旦木麦香吐司"],
+      "hasExtraPrice": false,
+      "productInventory": {
+        "totalCount": 2147483647,
+        "usedCount": 222,
+        "leftCount": 2147483425,
+        "limitCount": false
+      },
+      "saleState": 1,
+      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
+      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当",
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg"
+    },
+    {
+      "spuId": 1522430421,
+      "name": "莺歌燕麦拿铁",
+      "salePrice": 36.0,
+      "productType": 1,
+      "productTags": ["新品", "糯香玉米露"],
+      "hasExtraPrice": false,
+      "productInventory": {
+        "totalCount": 2147483647,
+        "usedCount": 83,
+        "leftCount": 2147483564,
+        "limitCount": false
+      },
+      "saleState": 1,
+      "introduction": "坚果香气浓郁，改用了清甜的燕麦奶，一杯糯而香",
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg"
+    },
+    {
+      "spuId": 1521860101,
+      "name": "美式·耶加雪菲",
+      "salePrice": 20.0,
+      "productType": 1,
+      "productTags": [],
+      "hasExtraPrice": false,
+      "productInventory": {
+        "totalCount": 2147483647,
+        "usedCount": 7685,
+        "leftCount": 2147475962,
+        "limitCount": false
+      },
+      "saleState": 1,
+      "introduction": "单一产地耶加雪菲，中深度烘焙",
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg"
+    },
+    {
+      "spuId": 1522080171,
+      "name": "罗马人美式",
+      "salePrice": 24.0,
+      "productType": 1,
+      "productTags": ["热门", "清爽型黑咖"],
+      "hasExtraPrice": false,
+      "productInventory": {
+        "totalCount": 2147483647,
+        "usedCount": 4279,
+        "leftCount": 2147479368,
+        "limitCount": false
+      },
+      "saleState": 1,
+      "introduction": "经典美式和鲜柠檬的碰撞",
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg"
+    },
+    {
+      "spuId": 1521880121,
+      "name": "黑胡子美式·果丁丁",
+      "salePrice": 26.0,
+      "productType": 1,
+      "productTags": ["招牌", "橙花风味"],
+      "hasExtraPrice": false,
+      "productInventory": {
+        "totalCount": 2147483647,
+        "usedCount": 1239,
+        "leftCount": 2147482408,
+        "limitCount": false
+      },
+      "saleState": 1,
+      "introduction": "意式浓缩与冰块打发，产生啤酒般绵密泡沫",
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/6bcbfa91-f914-43f7-aeea-6a09c7fc29e9.jpg"
+    },{
       "spuId": 1522400361,
       "name": "莺歌美式 ",
       "salePrice": 30.0,
@@ -16,13 +101,7 @@
       "saleState": 1,
       "img": "https://gridcoffee-online.fbcontent.cn//file/tgqkjp0ly.png",
       "introduction": "集中莺歌的优质风味，曼妙坚果香气，酸甜柑橘风味",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg"
     },
     {
       "spuId": 1522220391,
@@ -40,133 +119,7 @@
       "saleState": 1,
       "img": "https://gridcoffee-online.fbcontent.cn//file/fdb3g0fgd.png",
       "introduction": "轻柔的核果风味，尾韵是山核桃般坚果香气",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
-    },
-    {
-      "spuId": 1522680381,
-      "name": "莺歌拿铁",
-      "salePrice": 34.0,
-      "productType": 1,
-      "productTags": ["新品", "巴旦木麦香吐司"],
-      "hasExtraPrice": false,
-      "productInventory": {
-        "totalCount": 2147483647,
-        "usedCount": 222,
-        "leftCount": 2147483425,
-        "limitCount": false
-      },
-      "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/tacsysuzl.png",
-      "introduction": "坚果香气鲜馥甘香，黑茶处理法风味平衡得当",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
-    },
-    {
-      "spuId": 1522430421,
-      "name": "莺歌燕麦拿铁",
-      "salePrice": 36.0,
-      "productType": 1,
-      "productTags": ["新品", "糯香玉米露"],
-      "hasExtraPrice": false,
-      "productInventory": {
-        "totalCount": 2147483647,
-        "usedCount": 83,
-        "leftCount": 2147483564,
-        "limitCount": false
-      },
-      "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/uw2bwcx46.png",
-      "introduction": "坚果香气浓郁，改用了清甜的燕麦奶，一杯糯而香",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
-    },
-    {
-      "spuId": 1521860101,
-      "name": "美式·耶加雪菲",
-      "salePrice": 20.0,
-      "productType": 1,
-      "productTags": [],
-      "hasExtraPrice": false,
-      "productInventory": {
-        "totalCount": 2147483647,
-        "usedCount": 7685,
-        "leftCount": 2147475962,
-        "limitCount": false
-      },
-      "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/svr8a0hcx.png",
-      "introduction": "单一产地耶加雪菲，中深度烘焙",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
-    },
-    {
-      "spuId": 1522080171,
-      "name": "罗马人美式",
-      "salePrice": 24.0,
-      "productType": 1,
-      "productTags": ["热门", "清爽型黑咖"],
-      "hasExtraPrice": false,
-      "productInventory": {
-        "totalCount": 2147483647,
-        "usedCount": 4279,
-        "leftCount": 2147479368,
-        "limitCount": false
-      },
-      "saleState": 1,
-      "resourceUrl": "https://gridcoffee-img.fbcontent.cn/file/a32c1821-6369-4ab0-8153-7244312ae666.jpg",
-      "introduction": "经典美式和鲜柠檬的碰撞",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/2fe6ddd7-aec3-4315-96d1-4b84cf83f8f7.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
-    },
-    {
-      "spuId": 1521880121,
-      "name": "黑胡子美式·果丁丁",
-      "salePrice": 26.0,
-      "productType": 1,
-      "productTags": ["招牌", "橙花风味"],
-      "hasExtraPrice": false,
-      "productInventory": {
-        "totalCount": 2147483647,
-        "usedCount": 1239,
-        "leftCount": 2147482408,
-        "limitCount": false
-      },
-      "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/qk1gqh0km.jpg",
-      "introduction": "意式浓缩与冰块打发，产生啤酒般绵密泡沫",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/6bcbfa91-f914-43f7-aeea-6a09c7fc29e9.jpg",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/16ebcdc2-30cc-4cf0-86ac-ec63061daabc.jpg"
     },
     {
       "spuId": 1521490671,
@@ -182,15 +135,8 @@
         "limitCount": false
       },
       "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/o5m9fqtoo.jpg",
       "introduction": "意式浓缩与冰块打发，产生啤酒般绵密泡沫",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/3884eeb1-0eb9-42d1-95ff-cd6fa4167d3f.png",
-        "linkUrl": "",
-        "width": 1,
-        "height": 1
-      }
+      "tagImage": "https://gridcoffee-online.fbcontent.cn/file/3884eeb1-0eb9-42d1-95ff-cd6fa4167d3f.png"
     },
     {
       "spuId": 1522480351,
@@ -206,7 +152,7 @@
         "limitCount": false
       },
       "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/lo43081j9.jpg",
+
       "introduction": "云腿酥饼和茶香凤梨酥",
       "tagImage": null
     },
@@ -224,7 +170,6 @@
         "limitCount": false
       },
       "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/qht7nynb4.jpg",
       "introduction": "",
       "tagImage": null
     },
@@ -242,7 +187,6 @@
         "limitCount": false
       },
       "saleState": 2,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/1tlizf20y.jpg",
       "introduction": "",
       "tagImage": null
     },
@@ -260,15 +204,9 @@
         "limitCount": false
       },
       "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/8c20hc4gk.jpg",
+
       "introduction": "精选黑咖搭配多款面包",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png",
-        "linkUrl": "",
-        "width": 3,
-        "height": 2
-      }
+      "tagImage": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png"
     },
     {
       "spuId": 1522290241,
@@ -284,15 +222,9 @@
         "limitCount": false
       },
       "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/1kqucffw1.jpg",
+
       "introduction": "精选冷萃搭配多款面包",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png",
-        "linkUrl": "",
-        "width": 3,
-        "height": 2
-      }
+      "tagImage": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png"
     },
     {
       "spuId": 1522520221,
@@ -308,15 +240,9 @@
         "limitCount": false
       },
       "saleState": 1,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/r7n9qkrdz.jpg",
+
       "introduction": "精选奶咖搭配多款面包",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png",
-        "linkUrl": "",
-        "width": 3,
-        "height": 2
-      }
+      "tagImage": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png"
     },
     {
       "spuId": 1522390301,
@@ -332,15 +258,9 @@
         "limitCount": false
       },
       "saleState": 2,
-      "img": "https://gridcoffee-online.fbcontent.cn//file/pn9j4nedy.jpg",
+
       "introduction": "奶香醇厚的巴斯克蛋糕搭配精选黑咖",
-      "tagImage": {
-        "type": 1,
-        "resourceUrl": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png",
-        "linkUrl": "",
-        "width": 3,
-        "height": 2
-      }
+      "tagImage": "https://skypeople-online.fbcontent.cn/mingdao/12uQVbFCsTpHtWNjPKL42EfF93rXgBUL7enp.png"
     }
   ]
 }
