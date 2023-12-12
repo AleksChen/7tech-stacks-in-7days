@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".DetailsFragment">
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/buttonGroup">
 
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="400dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
-            <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="400dp">
 
-        </RelativeLayout>
-        <LinearLayout android:id="@+id/product" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
 
-            <LinearLayout android:id="@+id/productFirstRow" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                <TextView android:id="@+id/productName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="24sp" android:textStyle="bold" />
+            </RelativeLayout>
+            <LinearLayout android:id="@+id/product" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+
+                <LinearLayout android:id="@+id/productFirstRow" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:id="@+id/productName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="24sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/productBeanSource" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <ImageView android:id="@+id/productBeanSourceImg" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginEnd="6dp" />
+                    <TextView android:id="@+id/productBeanSourceText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/productSlogan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:layout_marginTop="10dp"/>
+                <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#828182" android:layout_marginVertical="15dp" />
             </LinearLayout>
-
-            <LinearLayout android:id="@+id/productBeanSource" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                <ImageView android:id="@+id/productBeanSourceImg" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginEnd="6dp" />
-                <TextView android:id="@+id/productBeanSourceText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp"/>
-            </LinearLayout>
-
-            <TextView android:id="@+id/productSlogan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:layout_marginTop="10dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#828182"
-                android:layout_marginVertical="15dp"
-                />
         </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout android:id="@+id/buttonGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_alignParentBottom="true">
+
+
+        <android.widget.Button android:id="@+id/toCart" android:layout_width="100dp" android:layout_height="60dp" android:layout_weight="1" android:text="加入购物车" android:background ="#969495" android:textColor="#ffffff" />
+
+        <android.widget.Button android:id="@+id/toBuy" android:layout_width="100dp" android:layout_height="60dp" android:layout_weight="1" android:text="直接购买" android:background ="#61663E" android:textColor="#ffffff"/>
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
-        
+
+</RelativeLayout>
