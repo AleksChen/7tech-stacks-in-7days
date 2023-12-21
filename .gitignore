@@ -39,5 +39,5 @@ node_modules
 
 .gradle
 .idea
-
+.vscode
 xcuserdata
