@@ -2,6 +2,15 @@ struct DetailData: Codable {
     let singleSpu: Detail
 }
 
+struct HashCoverImage: Codable, Hashable {
+    let resourceUrl: String
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(resourceUrl)
+        // hasher.combine(其他属性)
+    }
+}
+
 struct Detail: Codable, Identifiable {
     var id: String { spuId }
     let spuId: String
@@ -12,7 +21,7 @@ struct Detail: Codable, Identifiable {
     let beansSource: String
     let coverImage: CoverImage
     let beansTagImage: CoverImage
-    let carouselImages: [CoverImage]
+    let carouselImages: [HashCoverImage]
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -23,7 +32,7 @@ struct Detail: Codable, Identifiable {
         coverImage = try container.decode(CoverImage.self, forKey: .coverImage)
         cupType = try container.decode([String].self, forKey: .cupType)
         beansTagImage = try container.decode(CoverImage.self, forKey: .beansTagImage)
-        carouselImages = try container.decode([CoverImage].self, forKey: .carouselImages)
+        carouselImages = try container.decode([HashCoverImage].self, forKey: .carouselImages)
 
         if let spuIdString = try? container.decode(String.self, forKey: .spuId) {
             spuId = spuIdString
