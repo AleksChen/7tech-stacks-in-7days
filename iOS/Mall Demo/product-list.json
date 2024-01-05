@@ -1,4 +1,3 @@
-
 {
   "productList": [
     {
@@ -263,7 +262,13 @@
         "height": 0
       },
       "introduction": "云腿酥饼和茶香凤梨酥",
-      "tagImage": null
+      "tagImage": {
+        "type": 1,
+        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/3884eeb1-0eb9-42d1-95ff-cd6fa4167d3f.png",
+        "linkUrl": "",
+        "width": 1,
+        "height": 1
+      }
     },
     {
       "spuId": 1522660291,
@@ -287,7 +292,13 @@
         "height": 0
       },
       "introduction": "",
-      "tagImage": null
+      "tagImage": {
+        "type": 1,
+        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/3884eeb1-0eb9-42d1-95ff-cd6fa4167d3f.png",
+        "linkUrl": "",
+        "width": 1,
+        "height": 1
+      }
     },
     {
       "spuId": 1522710331,
@@ -311,7 +322,13 @@
         "height": 0
       },
       "introduction": "",
-      "tagImage": null
+      "tagImage": {
+        "type": 1,
+        "resourceUrl": "https://gridcoffee-online.fbcontent.cn/file/3884eeb1-0eb9-42d1-95ff-cd6fa4167d3f.png",
+        "linkUrl": "",
+        "width": 1,
+        "height": 1
+      }
     },
     {
       "spuId": 1522320211,

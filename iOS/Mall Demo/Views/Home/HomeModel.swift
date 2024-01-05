@@ -13,6 +13,7 @@ struct Product: Codable, Identifiable {
     let introduction: String
     let salePrice: Float
     let coverImage: CoverImage
+    let tagImage: CoverImage?
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -20,6 +21,7 @@ struct Product: Codable, Identifiable {
         introduction = try container.decode(String.self, forKey: .introduction)
         salePrice = try container.decode(Float.self, forKey: .salePrice)
         coverImage = try container.decode(CoverImage.self, forKey: .coverImage)
+        tagImage = try container.decode(CoverImage.self, forKey: .tagImage)
 
         if let spuIdString = try? container.decode(String.self, forKey: .spuId) {
             spuId = spuIdString

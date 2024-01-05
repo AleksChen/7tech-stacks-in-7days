@@ -1,14 +1,16 @@
 import SwiftUI
 import URLImage
+import Kingfisher
+
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
-
+    
     var body: some View {
         NavigationView {
             List(viewModel.products, id: \.id) { item in
-            ZStack{
-                HStack(alignment: .center) {
+                ZStack{
+                    HStack(alignment: .center) {
                         URLImage(URL(string: item.coverImage.resourceUrl)!) { image in
                             image
                                 .resizable()
@@ -16,17 +18,24 @@ struct HomeView: View {
                         }
                         .frame(width: 80, height: 80)
                         .padding(.trailing, 5)
-
+                        
                         VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                                .padding(.top, 5)
-                                .padding(.bottom, 3)
-
+                            HStack(alignment: .center) {
+                                if let imageUrl = item.tagImage?.resourceUrl {
+                                    KFImage(URL(string: imageUrl)).resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .scaledToFit().frame(width: 18, height: 18)
+                                }
+                                Text(item.name)
+                                    .font(.headline)
+                                    .padding(.top, 5)
+                                    .padding(.bottom, 3)
+                            }
+                            
                             Text(item.introduction)
                                 .font(.subheadline)
                                 .padding(.bottom, 3)
-
+                            
                             HStack {
                                 Spacer()
                                 Text("¥ \(String(format: "%.1f", item.salePrice))")
@@ -37,9 +46,9 @@ struct HomeView: View {
                         }
                         
                     }
-                NavigationLink(destination: ProductDetailView(viewModel: ProductDetailViewModel(spuId: item.spuId)).navigationBarTitleDisplayMode(.inline)) {
-                    EmptyView()
-                }.opacity(0)
+                    NavigationLink(destination: ProductDetailView(viewModel: ProductDetailViewModel(spuId: item.spuId)).navigationBarTitleDisplayMode(.inline)) {
+                        EmptyView()
+                    }.opacity(0)
                 }
             }
         }
