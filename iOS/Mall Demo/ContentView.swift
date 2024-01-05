@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+  // 创建视图模型的实例
+    let homeViewModel = HomeViewModel()
+    let meViewModel = MeViewModel(user: User(id: 1, name: "Pixel Bird"))
+    
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("首页")
-                }
-            
-            MeView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("我")
-                }
+        NavigationView{
+            TabView {
+                HomeView(viewModel: homeViewModel)
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("首页")
+                    }
+                MeView(viewModel: meViewModel)
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("我")
+                    }
+            }.font(.headline)
         }
     }
 }
