@@ -7,31 +7,55 @@
 
 import SwiftUI
 
-struct ContentView: View {
-  // 创建视图模型的实例
+struct ContentTabView: View {
+    // 创建视图模型的实例
     let homeViewModel = HomeViewModel()
     let meViewModel = MeViewModel(user: User(id: 1, name: "Pixel Bird"))
     
+    @State private var selectedTab = 0
+    @State private var isTabbarHidden = false
+    
     var body: some View {
-        NavigationView{
-            TabView {
-                HomeView(viewModel: homeViewModel)
-                    .tabItem {
-                        Image(systemName: "house.fill")
-                        Text("首页")
-                    }
+        VStack {
+            Spacer()
+            
+            // 这里是你的内容视图
+            if selectedTab == 0 {
+                HomeView(viewModel: homeViewModel,isTabbarHidden: $isTabbarHidden)
+            } else if selectedTab == 1 {
                 MeView(viewModel: meViewModel)
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("我")
+            }
+            
+            Spacer()
+            
+            VStack(alignment: .center) {
+                if !isTabbarHidden {
+                    GeometryReader { geometry in
+                        HStack {
+                            Button(action: {
+                                selectedTab = 0
+                            }) {
+                                Label("咖啡", systemImage: "house.fill")
+                                    .foregroundColor(selectedTab == 0 ? .blue : .gray)
+                            }
+                            .frame(width: geometry.size.width / 2,height:40)
+                            
+                            Button(action: {
+                                selectedTab = 1
+                            }) {
+                                Label("我的", systemImage: "person.fill")
+                                    .foregroundColor(selectedTab == 1 ? .blue : .gray)
+                            }
+                            .frame(width: geometry.size.width / 2,height:40)
+                        }
                     }
-            }.font(.headline)
-        }
+                }
+            }.frame(height: 50)}
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentTabView()
     }
 }

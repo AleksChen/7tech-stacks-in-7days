@@ -5,6 +5,7 @@ import Kingfisher
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @Binding var isTabbarHidden: Bool
     
     var body: some View {
         NavigationView {
@@ -46,9 +47,7 @@ struct HomeView: View {
                         }
                         
                     }
-                    NavigationLink(destination: ProductDetailView(viewModel: ProductDetailViewModel(spuId: item.spuId)).navigationBarTitleDisplayMode(.inline)) {
-                        EmptyView()
-                    }.opacity(0)
+                    NavigationLink(destination: ProductDetailView( viewModel: ProductDetailViewModel(isTabbarHidden: $isTabbarHidden))) {}.opacity(0)
                 }
             }
         }
@@ -56,6 +55,7 @@ struct HomeView: View {
         .statusBar(hidden: false)
         .onAppear {
             viewModel.fetchProducts()
+            // isTabbarHidden = false
         }
     }
 }

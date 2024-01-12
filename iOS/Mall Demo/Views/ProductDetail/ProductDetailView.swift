@@ -3,6 +3,7 @@ import Kingfisher
 
 struct ProductDetailView: View {
     @ObservedObject var viewModel: ProductDetailViewModel
+    
     @State private var selectedTab = 0
     
     @State private var selectedCupType: String? // 跟踪选中的按钮
@@ -58,7 +59,7 @@ struct ProductDetailView: View {
                                         .lineLimit(1) // 设置行数限制为 1
                                 }
                             }
-                        }                   
+                        }
                     }.padding(20)
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 
@@ -75,9 +76,14 @@ struct ProductDetailView: View {
                 }
             }
         }
-        .navigationBarHidden(true)
         .onAppear {
+            // @@ _isTabbarHidden 的修改不能放在 onAppear
+            // 在 SwiftUI 中，onAppear 是在视图即将出现在屏幕上时执行的。如果你在 onAppear 中设置 isTabbarHidden = true，并且 isTabbarHidden 控制的是视图的某些部分的显示和隐藏，那么这可能会导致视图在出现时立即隐藏，从而导致页面一片空白。
             viewModel.fetchProductDetail()
+            viewModel.hiddenTabbar()
+        }
+        .onDisappear {
+            viewModel.showTabbar()
         }
     }
 }

@@ -4,7 +4,7 @@ import SwiftUI
 struct Mall_DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentTabView()
         }
     }
 }
