@@ -9,21 +9,20 @@
   position: relative;
   display: flex;
   line-height: 1;
-  padding: 0;
+  padding: 10rpx;
   background: transparent;
-  width: 342rpx;
   border-radius: 0 0 16rpx 16rpx;
   align-items: center;
   justify-content: center;
   margin-bottom: 16rpx;
-  flex-direction: column;
+  background: #fff;
 }
 
 .goods-card__thumb {
   flex-shrink: 0;
   position: relative;
-  width: 340rpx;
-  height: 340rpx;
+  width: 200rpx;
+  height: 200rpx;
 }
 
 .goods-card__thumb:empty {
@@ -35,7 +34,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 16rpx 16rpx 0 0;
+  /* border-radius: 16rpx 16rpx 0 0; */
   overflow: hidden;
 }
 

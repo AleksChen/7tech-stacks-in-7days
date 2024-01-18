@@ -117,15 +117,4 @@ Page({
       message: '点击加入购物车',
     });
   },
-
-  navToSearchPage() {
-    wx.navigateTo({ url: '/pages/goods/search/index' });
-  },
-
-  navToActivityDetail({ detail }) {
-    const { index: promotionID = 0 } = detail || {};
-    wx.navigateTo({
-      url: `/pages/promotion-detail/index?promotion_id=${promotionID}`,
-    });
-  },
 });
