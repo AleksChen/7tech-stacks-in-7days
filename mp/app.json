@@ -7,10 +7,6 @@
     "pages/usercenter/address/edit/index",
     "pages/goods/list/index",
     "pages/goods/details/index",
-    "pages/goods/search/index",
-    "pages/goods/result/index",
-    "pages/goods/comments/index",
-    "pages/goods/comments/create/index",
     "pages/usercenter/name-edit/index"
   ],
   "tabBar": {
