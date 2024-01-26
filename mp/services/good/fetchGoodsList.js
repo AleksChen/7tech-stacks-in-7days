@@ -13,6 +13,7 @@ function mockFetchGoodsList(params) {
       item.spuId = item.spuId;
       item.thumb = item.primaryImage;
       item.title = item.title;
+      item.tagImage = item.tagImage;
       item.price = item.minSalePrice;
       item.originPrice = item.maxLinePrice;
       item.desc = '';

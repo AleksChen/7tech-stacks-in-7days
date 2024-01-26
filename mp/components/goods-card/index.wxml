@@ -16,8 +16,17 @@
 		</view>
 		<view class="goods-card__body">
 			<view class="goods-card__upper">
+				<view class="goods-card__first_row">
+					<t-image
+					wx:if="{{ !!goods.tagImage }}"
+					t-class="goods-card-tag__img"
+					src="{{ goods.tagImage }}"
+					mode="aspectFill"
+					lazy-load
+				/>
 				<view wx:if="{{ goods.title }}" class="goods-card__title">
 					{{ goods.title }}
+				</view>
 				</view>
 				<view wx:if="{{ goods.tags && !!goods.tags.length }}" class="goods-card__tags">
 					<view

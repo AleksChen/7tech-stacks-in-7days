@@ -60,7 +60,7 @@ page {
 }
 
 .home-page-container .tabs-external__track {
-  /* background-color: #fa4126 !important; */
+  /* background-color: #61663E !important; */
   height: 6rpx !important;
   border-radius: 4rpx !important;
   width: 48rpx !important;

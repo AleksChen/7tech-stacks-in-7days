@@ -11,6 +11,7 @@ function mockFetchGoodsList(pageIndex = 1, pageSize = 20) {
         thumb: item.primaryImage,
         title: item.title,
         price: item.minSalePrice,
+        tagImage: item.tagImage,
         originPrice: item.maxLinePrice,
         tags: item.spuTagList.map((tag) => tag.title),
       };

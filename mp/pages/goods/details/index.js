@@ -8,14 +8,7 @@ const imgPrefix = `${cdnBase}/`;
 
 const recLeftImg = `${imgPrefix}common/rec-left.png`;
 const recRightImg = `${imgPrefix}common/rec-right.png`;
-const obj2Params = (obj = {}, encode = false) => {
-  const result = [];
-  Object.keys(obj).forEach((key) =>
-    result.push(`${key}=${encode ? encodeURIComponent(obj[key]) : obj[key]}`),
-  );
 
-  return result.join('&');
-};
 
 Page({
   data: {
@@ -240,32 +233,6 @@ Page({
       return;
     }
     this.handlePopupHide();
-    // const query = {
-    //   quantity: buyNum,
-    //   storeId: '1',
-    //   spuId: this.data.spuId,
-    //   goodsName: this.data.details.title,
-    //   skuId:
-    //     type === 1 ? this.data.skuList[0].skuId : this.data.selectItem.skuId,
-    //   available: this.data.details.available,
-    //   price: this.data.details.minSalePrice,
-    //   specInfo: this.data.details.specList?.map((item) => ({
-    //     specTitle: item.title,
-    //     specValue: item.specValueList[0].specValue,
-    //   })),
-    //   primaryImage: this.data.details.primaryImage,
-    //   spuId: this.data.details.spuId,
-    //   thumb: this.data.details.primaryImage,
-    //   title: this.data.details.title,
-    // };
-    // let urlQueryStr = obj2Params({
-    //   goodsRequestList: JSON.stringify([query]),
-    // });
-    // urlQueryStr = urlQueryStr ? `?${urlQueryStr}` : '';
-    // const path = `/pages/order/order-confirm/index${urlQueryStr}`;
-    // wx.navigateTo({
-    //   url: path,
-    // });
   },
 
   specsConfirm() {

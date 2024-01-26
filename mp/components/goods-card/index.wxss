@@ -6,6 +6,7 @@
 }
 
 .goods-card__main {
+  width: 682rpx;
   position: relative;
   display: flex;
   line-height: 1;
@@ -38,6 +39,8 @@
   overflow: hidden;
 }
 
+
+
 .goods-card__body {
   display: flex;
   flex: 1 1 auto;
@@ -47,6 +50,12 @@
   flex-direction: column;
 }
 
+
+.goods-card__first_row {
+  display: flex;
+  flex-direction: row;
+}
+
 .goods-card__upper {
   display: flex;
   flex-direction: column;
@@ -54,9 +63,17 @@
   flex: 1 1 auto;
 }
 
+.goods-card-tag__img {
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  overflow: hidden;
+  margin-right: 6rpx;
+}
+
 .goods-card__title {
   flex-shrink: 0;
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: #333;
   font-weight: 400;
   display: -webkit-box;
@@ -76,10 +93,10 @@
 }
 
 .goods-card__tag {
-  color: #fa4126;
+  color: #61663E;
   background: transparent;
   font-size: 20rpx;
-  border: 1rpx solid #fa4126;
+  border: 1rpx solid #61663E;
   padding: 0 8rpx;
   border-radius: 16rpx;
   line-height: 30rpx;
@@ -123,7 +140,7 @@
   white-space: nowrap;
   font-weight: 700;
   order: 1;
-  color: #fa4126;
+  color: #61663E;
   margin: 0;
 }
 
